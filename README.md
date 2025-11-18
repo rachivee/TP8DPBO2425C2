@@ -8,21 +8,9 @@ Proyek ini merupakan sebuah aplikasi sederhana untuk mengelola data Lecturer dan
 
 Penjelasan tabel pada database :
 
-1. Tabel lecturers : Tabel lecturers digunakan untuk menyimpan data dosen. Tabel ini menjadi tabel utama yang berisi informasi mengenai setiap dosen yang terdaftar dalam sistem. Setiap dosen memiliki ID unik yang digunakan sebagai primary key dan menjadi acuan untuk relasi dari tabel lain. Data dalam tabel ini mencakup identitas dasar dosen seperti nama, NIDN, nomor telepon, dan tanggal bergabung. Tabel ini berdiri sendiri, namun menjadi referensi bagi tabel lain, terutama tabel courses. Kolom dalam tabel:
+1. Tabel lecturers : Tabel lecturers digunakan untuk menyimpan data dosen. Tabel ini menjadi tabel utama yang berisi informasi mengenai setiap dosen yang terdaftar dalam sistem. Setiap dosen memiliki ID unik yang digunakan sebagai primary key dan menjadi acuan untuk relasi dari tabel lain. Data dalam tabel ini mencakup identitas dasar dosen seperti nama, NIDN, nomor telepon, dan tanggal bergabung. Tabel ini berdiri sendiri, namun menjadi referensi bagi tabel lain, terutama tabel courses. Kolom dalam tabel: id, name, nidn, phone, join_date
 
-id — Primary key
-name — Nama dosen
-nidn — Nomor identitas dosen
-phone — Nomor telepon
-join_date — Tanggal dosen bergabung
-
-2. Tabel courses : Tabel courses menyimpan data mata kuliah yang ditawarkan. Setiap mata kuliah memiliki ID unik sebagai primary key dan beberapa atribut seperti nama mata kuliah, kode, serta jumlah SKS. Hal yang paling penting adalah adanya kolom lecturer_id, yang berperan sebagai foreign key dan menjadi relasi ke tabel lecturers. Dengan relasi ini, satu dosen dapat mengajar banyak mata kuliah (relasi one-to-many). Kolom dalam tabel:
-
-id — Primary key
-course_name — Nama mata kuliah
-course_code — Kode mata kuliah
-credits — Jumlah SKS
-lecturer_id — Foreign key yang merujuk ke lecturers.id
+2. Tabel courses : Tabel courses menyimpan data mata kuliah yang ditawarkan. Setiap mata kuliah memiliki ID unik sebagai primary key dan beberapa atribut seperti nama mata kuliah, kode, serta jumlah SKS. Hal yang paling penting adalah adanya kolom lecturer_id, yang berperan sebagai foreign key dan menjadi relasi ke tabel lecturers. Dengan relasi ini, satu dosen dapat mengajar banyak mata kuliah (relasi one-to-many). Kolom dalam tabel: id, course_name, course_code, credits, lecturer_id.
 
 Penjelasan konsep MVC :
 
