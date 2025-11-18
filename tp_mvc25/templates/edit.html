@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+  <div class="container my-4">
+    <h2>DATA_JUDUL_FORM</h2>
+
+    <form method="post" action="lecturer.php">
+      <input type="hidden" name="id" value="VAL_ID">
+
+      <div class="mb-3">
+        <label>Name</label>
+        <input required type="text" name="name" class="form-control" value="VAL_NAME">
+      </div>
+
+      <div class="mb-3">
+        <label>NIDN</label>
+        <input required type="text" name="nidn" class="form-control" value="VAL_NIDN">
+      </div>
+
+      <div class="mb-3">
+        <label>Phone</label>
+        <input required type="text" name="phone" class="form-control" value="VAL_PHONE">
+      </div>
+
+      <div class="mb-3">
+        <label>Join Date</label>
+        <input required type="date" name="join_date" class="form-control" value="VAL_JOIN_DATE">
+      </div>
+
+      <button class="btn btn-warning" type="submit" name="edit"> Update </button>
+      <a class="btn btn-secondary" href="lecturer.php"> Cancel </a>
+    </form>
+  </div>
+</body>
+</html>
